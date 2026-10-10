@@ -239,9 +239,9 @@ test("offline reload and install readiness", async ({ page, context }) => {
   await expect
     .poll(() => page.evaluate(() => !!navigator.serviceWorker.controller))
     .toBe(true);
-  const manifest = await (
-    await page.request.get("/manifest.webmanifest")
-  ).json();
+  const manifest = await page.evaluate(async () =>
+    (await fetch("/manifest.webmanifest")).json(),
+  );
   expect(manifest.display).toBe("standalone");
   expect(manifest.icons).toHaveLength(3);
   await context.setOffline(true);

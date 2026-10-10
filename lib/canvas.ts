@@ -113,7 +113,7 @@ export async function renderDesign(canvas: HTMLCanvasElement, d: Design) {
   const margin = 35;
   // Fit unusually long passages without clipping. The same layout is used for exports.
   let effectiveSize = d.size;
-  let lines: string[] = [];
+  let lines: string[];
   let lh = effectiveSize * d.lineHeight;
   do {
     ctx.font = `${effectiveSize}px ${d.font}`;

@@ -1,13 +1,27 @@
 import { defineConfig } from "eslint/config";
-import next from "eslint-config-next/core-web-vitals";
-import ts from "eslint-config-next/typescript";
+import js from "@eslint/js";
+import ts from "typescript-eslint";
+import hooks from "eslint-plugin-react-hooks";
+import globals from "globals";
 export default defineConfig([
-  ...next,
-  ...ts,
-  { ignores: ["public/sw.js", "test-results/**"] },
   {
+    ignores: [
+      ".next/**",
+      "node_modules/**",
+      "public/sw.js",
+      "next-env.d.ts",
+      "test-results/**",
+      "playwright-report/**",
+    ],
+  },
+  js.configs.recommended,
+  ...ts.configs.recommended,
+  { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
+  {
+    files: ["**/*.{ts,tsx}"],
+    plugins: { "react-hooks": hooks },
     rules: {
-      "@next/next/no-img-element": "off",
+      ...hooks.configs.recommended.rules,
       "react-hooks/set-state-in-effect": "off",
     },
   },

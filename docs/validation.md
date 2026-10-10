@@ -13,3 +13,9 @@ Validated October 10, 2026 against the production Next.js build using real headl
 - Storage failures are surfaced and do not produce a false saved confirmation. Invalid backups are rejected.
 
 Physical device installation, Safari-specific behavior, and actual native OS share sheets cannot be verified in headless Chromium. The browser-specific guidance and download fallbacks are implemented. Multi-tab and cross-device synchronization are outside this local-only release.
+
+## Production verification
+
+Production URL: https://scripturestudio-livid.vercel.app
+
+The same seven browser scenarios pass against the public HTTPS deployment, including real offline reload/export and browser-process restart. Vercel's runtime error query reports no errors in the release window. The dependency audit reports zero vulnerabilities after removing the unpatched, development-only Next.js ESLint glob dependency chain; ESLint 10 with TypeScript and React Hooks rules remains enabled.

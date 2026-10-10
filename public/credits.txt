@@ -1,0 +1,19 @@
+Daily Scripture Studio — sources and licenses
+
+Scripture: World English Bible (WEB), public domain.
+Source: https://ebible.org/web/ and https://ebible.org/eng-web/
+The library uses exact, curated verses. Reflections and prayers are original devotional writing.
+The landing template's Psalm 46:10 is labeled as an excerpt.
+
+Photography: Unsplash License (free commercial/noncommercial use; redistribution as competing stock library prohibited).
+https://unsplash.com/license
+Lake: photo-1470770841072-f978cf4d019e, author Luca Bravo, https://unsplash.com/photos/zAjdgNXsMeg
+Mountain: photo-1464822759023-fed622ff2c3b, author Simon Berger, https://unsplash.com/photos/twukN12EN7c
+Forest: photo-1441974231531-c6227db76b6e, author Sebastian Unrau, https://unsplash.com/photos/sp-p7uuT0tw
+Sunrise: photo-1470252649378-9c29740c9fa8, author Dawid Zawila, https://unsplash.com/photos/-G3rw6Y02D0
+Images are bundled locally; no image service is contacted by the application.
+
+Font: Cormorant Garamond by Christian Thalmann, SIL Open Font License 1.1.
+https://github.com/google/fonts/tree/main/ofl/cormorantgaramond
+License included at /fonts/OFL.txt. Georgia and Arial use browser/device fonts.
+Icons: Lucide, ISC license. Custom application icon created for this project.
